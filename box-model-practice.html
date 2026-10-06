@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Box Model Practice | Julius Othiambo</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        /* =========================
+           BOX MODEL PRACTICE
+        ========================= */
+
+        .practice-page {
+            padding: 40px 0;
+        }
+
+        .practice-section {
+            margin-bottom: 60px;
+        }
+
+        .practice-section h2 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           EXERCISE 1
+        ========================= */
+
+        .box-container {
+            background-color: #e5e7eb;
+            padding: 30px;
+            border: 3px dashed #6b7280;
+        }
+
+        .box {
+            background-color: #bfdbfe;
+            padding: 25px;
+            border: 5px solid #2563eb;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .box-content {
+            background-color: #60a5fa;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* =========================
+           EXERCISE 2
+        ========================= */
+
+        .broken-box {
+            width: 300px;
+            padding: 20px;
+            border: none;
+
+            /* Fix */
+            box-sizing: border-box;
+
+            background-color: #dbeafe;
+            margin-top: 20px;
+        }
+
+        /* =========================
+           EXERCISE 3
+        ========================= */
+
+        .practice-card {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #808080;
+            background-color: white;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+
+        .practice-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .practice-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .practice-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .practice-card .button {
+            display: inline-block;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 400px) {
+
+            .broken-box,
+            .practice-card {
+                width: 100%;
+            }
+
+            .box-container {
+                padding: 15px;
+            }
+
+            .box {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            Julius Othiambo
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="practice-page">
+
+    <div class="container">
+
+        <h1>CSS Box Model Practice</h1>
+
+        <p>
+            This page demonstrates the CSS Box Model using
+            content, padding, borders and margins.
+        </p>
+
+
+        <!-- =========================
+             EXERCISE 1
+        ========================== -->
+
+        <section class="practice-section">
+
+            <h2>Exercise 1: Box Model Visualization</h2>
+
+            <p>
+                The box below demonstrates the four main parts
+                of the CSS Box Model.
+            </p>
+
+            <div class="box-container">
+
+                <div class="box">
+
+                    <div class="box-content">
+                        Content
+                    </div>
+
+                    <p>
+                        Padding surrounds the content.
+                        The blue border surrounds the padding.
+                        Margin creates space outside the box.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EXERCISE 2
+        ========================== -->
+
+        <section class="practice-section">
+
+            <h2>Exercise 2: Debug the Layout</h2>
+
+            <p>
+                This box must have a total width of exactly
+                300px.
+            </p>
+
+            <div class="broken-box">
+
+                <strong>300px Total Width</strong>
+
+                <p>
+                    box-sizing: border-box makes the padding
+                    part of the 300px width.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EXERCISE 3
+        ========================== -->
+
+        <section class="practice-section">
+
+            <h2>Exercise 3: Card Component</h2>
+
+            <p>
+                This card has a total width of 300px,
+                20px padding and a 1px border.
+            </p>
+
+            <article class="practice-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80"
+                    alt="Modern workspace"
+                >
+
+                <h3>
+                    My Web Development Card
+                </h3>
+
+                <p>
+                    I am learning HTML, CSS, JavaScript,
+                    Git and GitHub as part of my web
+                    development journey.
+                </p>
+
+                <a href="projects.html" class="button">
+                    View Projects
+                </a>
+
+            </article>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            &copy; 2026 Julius Othiambo.
+            All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
