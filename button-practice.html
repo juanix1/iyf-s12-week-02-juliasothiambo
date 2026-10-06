@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Button Practice | Julius Othiambo</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .button-page {
+            padding: 60px 0;
+        }
+
+        .button-demo {
+            background-color: var(--color-white);
+            padding: 30px;
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .button-secondary {
+            background-color: var(--color-secondary);
+            border-color: var(--color-secondary);
+        }
+
+        .button-outline {
+            background-color: transparent;
+            color: var(--color-primary);
+        }
+
+        .button-outline:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .button-disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 767px) {
+            .button-group {
+                flex-direction: column;
+            }
+
+            .button-group .button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Button Practice</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="button-page">
+            <div class="container">
+
+                <div class="button-demo">
+
+                    <h2>Reusable Button Component</h2>
+
+                    <p>
+                        These buttons use reusable CSS classes and
+                        responsive styling.
+                    </p>
+
+                    <div class="button-group">
+
+                        <a href="index.html" class="button">
+                            Primary Button
+                        </a>
+
+                        <a href="projects.html"
+                           class="button button-secondary">
+                            Secondary Button
+                        </a>
+
+                        <a href="about.html"
+                           class="button button-outline">
+                            Outline Button
+                        </a>
+
+                        <button class="button button-disabled"
+                                disabled>
+                            Disabled Button
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 Julius Othiambo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
