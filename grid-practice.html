@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Grid Practice | Julius Othiambo</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ========================================
+           TASK 4.2 — CSS GRID PRACTICE
+        ======================================== */
+
+        .grid-section {
+            padding: 50px 0;
+        }
+
+        .grid-section h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .grid-section h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* ========================================
+           1. THREE-COLUMN IMAGE GALLERY
+        ======================================== */
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-item p {
+            padding: 15px;
+            margin: 0;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* ========================================
+           2. MAGAZINE LAYOUT
+        ======================================== */
+
+        .magazine {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+        }
+
+        .magazine-main {
+            grid-row: span 2;
+            background-color: var(--color-white);
+            padding: 25px;
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+        }
+
+        .magazine-side {
+            background-color: var(--color-white);
+            padding: 25px;
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+        }
+
+        .magazine-main img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* ========================================
+           3. RESPONSIVE PROJECT GRID
+        ======================================== */
+
+        .grid-projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .grid-project-card {
+            background-color: var(--color-white);
+            padding: 25px;
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .grid-project-card h3 {
+            font-size: var(--font-xl);
+        }
+
+        .grid-project-card p {
+            color: var(--color-muted);
+        }
+
+        /* ========================================
+           TABLET
+        ======================================== */
+
+        @media (max-width: 1024px) {
+
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-projects {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 767px) {
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .magazine {
+                grid-template-columns: 1fr;
+            }
+
+            .magazine-main {
+                grid-row: auto;
+            }
+
+            .grid-projects {
+                grid-template-columns: 1fr;
+            }
+
+            .magazine-main img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>CSS Grid Practice</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="grid-section">
+
+            <div class="container">
+
+                <h1>Task 4.2 — CSS Grid</h1>
+
+                <!-- =====================================
+                     1. IMAGE GALLERY
+                ====================================== -->
+
+                <h2>1. Three-Column Image Gallery</h2>
+
+                <div class="image-gallery">
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                            alt="Laptop showing code">
+                        <p>Web Development</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                            alt="Computer code on screen">
+                        <p>Coding</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                            alt="Person working on a laptop">
+                        <p>Technology</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+                            alt="Programming code">
+                        <p>Programming</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=800&q=80"
+                            alt="Laptop on a desk">
+                        <p>Projects</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80"
+                            alt="Computer programming">
+                        <p>Software</p>
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+                     2. MAGAZINE LAYOUT
+                ====================================== -->
+
+                <h2>2. Magazine Layout</h2>
+
+                <div class="magazine">
+
+                    <article class="magazine-main">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80"
+                            alt="Computer technology">
+
+                        <h2>The Future of Web Development</h2>
+
+                        <p>
+                            Web development is constantly changing.
+                            Modern developers use HTML, CSS and JavaScript
+                            to create responsive and interactive websites.
+                        </p>
+
+                        <p>
+                            Learning these technologies provides a strong
+                            foundation for building real-world projects.
+                        </p>
+
+                    </article>
+
+                    <article class="magazine-side">
+
+                        <h3>Learning CSS</h3>
+
+                        <p>
+                            CSS helps developers control colors,
+                            spacing, layouts, typography and responsive
+                            design.
+                        </p>
+
+                    </article>
+
+                    <article class="magazine-side">
+
+                        <h3>Responsive Design</h3>
+
+                        <p>
+                            Responsive design makes websites work well
+                            on phones, tablets and computers.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =====================================
+                     3. PROJECT GRID
+                ====================================== -->
+
+                <h2>3. Responsive Project Grid</h2>
+
+                <div class="grid-projects">
+
+                    <article class="grid-project-card">
+
+                        <h3>Portfolio Website</h3>
+
+                        <p>
+                            A personal portfolio created using
+                            HTML and CSS.
+                        </p>
+
+                        <a href="index.html">View Project</a>
+
+                    </article>
+
+                    <article class="grid-project-card">
+
+                        <h3>Week 01 Project</h3>
+
+                        <p>
+                            A semantic HTML portfolio created
+                            during IYF Season 12.
+                        </p>
+
+                        <a href="projects.html">View Project</a>
+
+                    </article>
+
+                    <article class="grid-project-card">
+
+                        <h3>Week 02 Project</h3>
+
+                        <p>
+                            A responsive portfolio styled with
+                            CSS and modern layouts.
+                        </p>
+
+                        <a href="projects.html">View Project</a>
+
+                    </article>
+
+                    <article class="grid-project-card">
+
+                        <h3>Furniture Website</h3>
+
+                        <p>
+                            A future project for displaying
+                            furniture products online.
+                        </p>
+
+                        <a href="#">Coming Soon</a>
+
+                    </article>
+
+                    <article class="grid-project-card">
+
+                        <h3>JavaScript App</h3>
+
+                        <p>
+                            A future interactive web application
+                            using JavaScript.
+                        </p>
+
+                        <a href="#">Coming Soon</a>
+
+                    </article>
+
+                    <article class="grid-project-card">
+
+                        <h3>Future Project</h3>
+
+                        <p>
+                            More real-world development projects
+                            will be added here.
+                        </p>
+
+                        <a href="#">Coming Soon</a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
