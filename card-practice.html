@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Card Practice | Julius Othiambo</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .card-page {
+            padding: 60px 0;
+        }
+
+        .card-page > .container > h1 {
+            text-align: center;
+        }
+
+        .card-page > .container > p {
+            text-align: center;
+            color: var(--color-muted);
+            margin-bottom: 40px;
+        }
+
+        .reusable-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .skill-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h2 {
+            font-size: var(--font-xl);
+        }
+
+        .skill-card p {
+            color: var(--color-muted);
+        }
+
+        .skill-card .button {
+            margin-top: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .reusable-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .reusable-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Reusable Card Practice</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="card-page">
+
+            <div class="container">
+
+                <h1>My Skills</h1>
+
+                <p>
+                    These cards use the same reusable design while
+                    displaying different content.
+                </p>
+
+                <div class="reusable-cards">
+
+                    <!-- Card 1 -->
+                    <article class="skill-card">
+
+                        <div class="skill-icon">🌐</div>
+
+                        <h2>HTML</h2>
+
+                        <p>
+                            I use HTML to create the structure and
+                            semantic content of websites.
+                        </p>
+
+                        <a href="about.html" class="button">
+                            Learn More
+                        </a>
+
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="skill-card">
+
+                        <div class="skill-icon">🎨</div>
+
+                        <h2>CSS</h2>
+
+                        <p>
+                            I use CSS to style websites and create
+                            responsive layouts.
+                        </p>
+
+                        <a href="projects.html" class="button">
+                            View Projects
+                        </a>
+
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="skill-card">
+
+                        <div class="skill-icon">⚡</div>
+
+                        <h2>JavaScript</h2>
+
+                        <p>
+                            I am learning JavaScript to make websites
+                            interactive and functional.
+                        </p>
+
+                        <a href="projects.html" class="button">
+                            My Projects
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 Julius Othiambo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
