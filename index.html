@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Julius Othiambo's developer portfolio">
     <title>Julius Othiambo | Developer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,14 +12,22 @@
 
 <header>
     <div class="container nav-container">
-        <a href="index.html" class="logo">Julius Othiambo</a>
 
-        <nav>
+        <a href="index.html" class="logo">
+            Julius Othiambo
+        </a>
+
+        <button class="menu-toggle" aria-label="Open navigation">
+            ☰
+        </button>
+
+        <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
+
     </div>
 </header>
 
@@ -38,22 +47,25 @@
                     learning new technologies.
                 </p>
 
-                <div class="hero-buttons">
-                    <a href="projects.html" class="button">View My Projects</a>
-                    <a href="contact.html" class="button secondary-button">Contact Me</a>
-                </div>
+                <a href="projects.html" class="button">
+                    View My Projects
+                </a>
+
+                <a href="contact.html" class="button">
+                    Contact Me
+                </a>
             </div>
 
             <div class="hero-image">
-                <div class="profile-placeholder">
-                    JO
-                </div>
+                <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+                    alt="Laptop showing web development code">
             </div>
 
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills page-section">
         <div class="container">
 
             <h2>My Skills</h2>
@@ -71,28 +83,29 @@
                 <article class="card">
                     <h3>CSS</h3>
                     <p>
-                        I use CSS to style websites and create responsive
-                        layouts.
+                        I use CSS to style websites and make them
+                        responsive.
                     </p>
                 </article>
 
                 <article class="card">
                     <h3>JavaScript</h3>
                     <p>
-                        I am learning JavaScript to make websites
-                        interactive and dynamic.
+                        I am learning JavaScript to add interaction
+                        and functionality to websites.
                     </p>
                 </article>
 
                 <article class="card">
                     <h3>Git & GitHub</h3>
                     <p>
-                        I use Git and GitHub to manage and share my
-                        coding projects.
+                        I use Git and GitHub to manage and share
+                        my projects.
                     </p>
                 </article>
 
             </div>
+
         </div>
     </section>
 
@@ -100,9 +113,18 @@
 
 <footer>
     <div class="container">
-        <p>&copy; 2026 Julius Othiambo. All rights reserved.</p>
+        <p>&copy; 2026 Julius Othiambo. All Rights Reserved.</p>
     </div>
 </footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
