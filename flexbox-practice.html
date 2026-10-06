@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Practice | Julius Othiambo</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Task 4.1: Flexbox Practice */
+
+        .flex-section {
+            padding: 50px 0;
+        }
+
+        .flex-section h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* 1. Navigation Flexbox */
+        .flex-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background-color: var(--color-dark);
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+
+        .flex-logo {
+            color: var(--color-white);
+            font-size: var(--font-xl);
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .flex-nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .flex-nav-links a {
+            color: var(--color-white);
+            font-weight: 500;
+        }
+
+        .flex-nav-links a:hover {
+            color: var(--color-primary-light);
+        }
+
+        /* 2. Three-card Flexbox row */
+        .flex-cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .flex-card {
+            flex: 1 1 250px;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .flex-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .flex-card h2 {
+            font-size: var(--font-xl);
+        }
+
+        .flex-card p {
+            color: var(--color-muted);
+        }
+
+        /* 3. Footer columns */
+        .flex-footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 40px;
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            border-radius: 8px;
+        }
+
+        .footer-column {
+            flex: 1 1 200px;
+        }
+
+        .footer-column h3 {
+            color: var(--color-white);
+            font-size: var(--font-lg);
+        }
+
+        .footer-column p {
+            color: #d1d5db;
+        }
+
+        .footer-column a {
+            color: var(--color-primary-light);
+        }
+
+        @media (max-width: 600px) {
+            .flex-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .flex-nav-links {
+                justify-content: center;
+            }
+
+            .flex-footer {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Flexbox Practice</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="flex-section">
+            <div class="container">
+
+                <!-- Navigation -->
+                <h2>1. Flexbox Navigation</h2>
+
+                <nav class="flex-nav">
+                    <div class="flex-logo">
+                        Julius Othiambo
+                    </div>
+
+                    <div class="flex-nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </nav>
+
+                <!-- Cards -->
+                <h2>2. Three-Card Flexbox Row</h2>
+
+                <div class="flex-cards">
+
+                    <article class="flex-card">
+                        <h2>HTML</h2>
+                        <p>
+                            I use HTML to create the structure and content
+                            of my websites.
+                        </p>
+                    </article>
+
+                    <article class="flex-card">
+                        <h2>CSS</h2>
+                        <p>
+                            I use CSS to style websites and make them
+                            responsive and attractive.
+                        </p>
+                    </article>
+
+                    <article class="flex-card">
+                        <h2>JavaScript</h2>
+                        <p>
+                            I am learning JavaScript to add interaction
+                            and functionality to websites.
+                        </p>
+                    </article>
+
+                </div>
+
+                <!-- Footer -->
+                <h2>3. Flexbox Footer Columns</h2>
+
+                <footer class="flex-footer">
+
+                    <div class="footer-column">
+                        <h3>About Me</h3>
+                        <p>
+                            I am Julius Othiambo, a student learning
+                            software and web development.
+                        </p>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="about.html">About</a></p>
+                        <p><a href="projects.html">Projects</a></p>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <p>Email: julius@example.com</p>
+                        <p>Kenya</p>
+                    </div>
+
+                </footer>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
