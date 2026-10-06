@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hero Practice | Julius Othiambo</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .hero-practice {
+            padding: 60px 0;
+        }
+
+        .hero-box {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            align-items: center;
+            background-color: var(--color-white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .hero-box-content {
+            text-align: center;
+        }
+
+        .hero-label {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: var(--font-sm);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .hero-box-content h2 {
+            font-size: var(--font-4xl);
+        }
+
+        .hero-box-content p {
+            color: var(--color-muted);
+            max-width: 600px;
+            margin: 0 auto 25px;
+            font-size: var(--font-lg);
+        }
+
+        .hero-box-image {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .hero-box-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .secondary-button {
+            background-color: var(--color-secondary);
+            border-color: var(--color-secondary);
+        }
+
+        @media (min-width: 768px) {
+
+            .hero-box {
+                flex-direction: row;
+                padding: 50px;
+                justify-content: space-between;
+            }
+
+            .hero-box-content {
+                flex: 1;
+                text-align: left;
+            }
+
+            .hero-box-content p {
+                margin-left: 0;
+            }
+
+            .hero-buttons {
+                justify-content: flex-start;
+            }
+
+            .hero-box-image {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Hero Section Practice</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero-practice">
+
+            <div class="container">
+
+                <div class="hero-box">
+
+                    <div class="hero-box-content">
+
+                        <div class="hero-label">
+                            WELCOME TO MY PORTFOLIO
+                        </div>
+
+                        <h2>
+                            Hi, I'm Julius Othiambo 👋
+                        </h2>
+
+                        <p>
+                            I'm a student learning software and web
+                            development. I enjoy creating websites
+                            and learning new technologies.
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <a href="projects.html" class="button">
+                                View My Projects
+                            </a>
+
+                            <a href="contact.html"
+                               class="button secondary-button">
+                                Contact Me
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="hero-box-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80"
+                            alt="Laptop displaying web development code">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 Julius Othiambo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
